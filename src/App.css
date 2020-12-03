@@ -1,0 +1,98 @@
+.App{
+    width: 100%;
+    padding: 0 150px;
+}
+
+.App-header,
+.App-footer,
+.App-main{
+    z-index: 2;
+    position: fixed;
+    background-color: red;
+    width: calc(100vw - 300px);
+    height: 50px;
+}
+
+.App-footer{
+    bottom: 0;
+    background-color: green;
+}
+
+.App-main{
+    z-index: 1;
+    position: relative;
+    background-color: white;
+    min-height: 2500px;
+    padding: 50px 0;
+}
+
+.App-main-header{
+    height: 300px;
+    width: calc(100% - 200px);
+    background-color: blue;
+    margin: 0 100px;
+    position: relative;
+}
+
+.App-main-body{
+    margin: 0 100px;
+    text-align: center;
+}
+
+.App-main-header-animation{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    top: 50%;
+    cursor: pointer;
+    transition: all 1s ease;
+    transform: translate(0, -50%);
+}
+
+.App-main-header-animation:hover{
+    transform: translate(calc(100vw - 500px - 100%), -50%);
+}
+
+.App-main-aside-left,
+.App-main-aside-right{
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    background: linear-gradient(0.25turn, #000, #fff);;
+}
+
+.App-main-aside-right{
+    right: 0;
+    background: linear-gradient(0.25turn, #fff, #000);;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 30px 30px 30px 30px 30px 30px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Pracownicy Pracownicy"
+      "Pracownicy Pracownicy"
+      "im1 naz1"
+      "im2 naz2"
+      "im3 naz3"
+      "im4 naz4";
+}
+  
+.Pracownicy {
+    grid-area: Pracownicy;
+    line-height: 60px;
+}
+  
+.im1 { grid-area: im1; }  
+.im2 { grid-area: im2; }
+.im3 { grid-area: im3; }
+.im4 { grid-area: im4; }
+
+.naz1 { grid-area: naz1; }
+
+.naz2 { grid-area: naz2; }
+.naz3 { grid-area: naz3; }
+.naz4 { grid-area: naz4; }
