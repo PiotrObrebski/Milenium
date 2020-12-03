@@ -70,17 +70,24 @@
 .grid-container {
     display: grid;
     grid-template-columns: 100px 100px;
-    grid-template-rows: 30px 30px 30px 30px 30px 30px;
+    grid-template-rows: 60px 30px 30px 30px 30px 30px;
     gap: 0px 0px;
     grid-template-areas:
-      "Pracownicy Pracownicy"
       "Pracownicy Pracownicy"
       "im1 naz1"
       "im2 naz2"
       "im3 naz3"
-      "im4 naz4";
+      "im4 naz4"
+      "im5 naz5";
 }
-  
+
+.form-validate{
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    margin: 10px 0;
+    color: red;
+}
 .Pracownicy {
     grid-area: Pracownicy;
     line-height: 60px;
@@ -90,9 +97,29 @@
 .im2 { grid-area: im2; }
 .im3 { grid-area: im3; }
 .im4 { grid-area: im4; }
+.im5 { grid-area: im5; }
 
 .naz1 { grid-area: naz1; }
-
 .naz2 { grid-area: naz2; }
 .naz3 { grid-area: naz3; }
 .naz4 { grid-area: naz4; }
+.naz5 { grid-area: naz5; }
+
+.naz {
+    position: relative;
+}
+
+.delete{
+    position: absolute;
+    right: -50px;
+    top: 0;
+    width: 250px;
+    height: 20px;
+    color: red;
+    cursor: pointer;
+    text-align-last: right;
+}
+
+.delete:hover{
+    border-bottom: 1px solid red;
+}
